@@ -1,0 +1,9 @@
+name: RedstoneCircuitManager
+version: '${project.version}'
+main: org.jajader.RedstoneCircuitManager
+api-version: '1.20'
+commands:
+  load:
+    description: r
+  save:
+    description: n
