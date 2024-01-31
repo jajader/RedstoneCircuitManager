@@ -5,7 +5,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.world.ChunkLoadEvent;
-import org.jajader.SchematicSaveManager.SchematicLoader;
 
 public class ChunkloadListener implements Listener {
 
@@ -16,8 +15,6 @@ public class ChunkloadListener implements Listener {
                 for (Player p : Bukkit.getOnlinePlayers()) {
                     p.sendMessage("ASDF");
                 }
-                SchematicLoader sl = new SchematicLoader();
-                sl.loadSchematics("5193", e.getChunk().getBlock(0,70,0).getLocation());
             }
         }
     }
