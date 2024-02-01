@@ -29,7 +29,7 @@ public class ChunkloadListener implements Listener {
     public void Chunkload(ChunkLoadEvent e) {
         if (e.getChunk().getInhabitedTime() == 0) {
             for (String k : KEY.keySet()) {
-                    if (e.getChunk().getChunkKey() % 5000 == KEY.get(k)) {
+                    if (Math.abs(e.getChunk().getChunkKey() % 5000) == KEY.get(k)) {
                         int max = getHighestBlock(e.getChunk());
                         SchematicLoader sl = new SchematicLoader();
                         sl.loadSchematics(k, e.getChunk().getBlock(0,max,0).getLocation());

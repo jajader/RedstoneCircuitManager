@@ -41,7 +41,7 @@ public class SchematicLoader {
                     Operation operation = new ClipboardHolder(clipboard)
                             .createPaste(editSession)
                             .to(BlockVector3.at(pasteLoc.getX(),pasteLoc.getY(),pasteLoc.getZ()))
-                            .ignoreAirBlocks(false)
+                            .ignoreAirBlocks(true)
                             .build();
                     Operations.complete(operation);
                 } catch (WorldEditException e) {
